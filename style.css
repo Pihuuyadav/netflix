@@ -33,7 +33,7 @@ body {
 
 nav {
     display: flex;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: auto;
     justify-content: space-between;
@@ -464,9 +464,9 @@ footer span{
     }
 
     .hero-actions input {
-        width: 100%;
+        width: 90%;
         min-width: 0;
-        
+        margin-bottom: 8px;
         padding-right: 1rem;
     }
 

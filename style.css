@@ -5,6 +5,8 @@
 
 body {
     background-color: black;
+    padding: 0;
+    margin: 0;
 }
 
 .main {
@@ -12,11 +14,12 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+    width: 100%;
     height: 95vh;
     background-color: black;
     position: relative;
 }
+
 
 .main .box {
     height: 95vh;
@@ -25,7 +28,7 @@ body {
     background-color: black;
     position: absolute;
     top: 0;
-    border: rgba(255, 60, 60, 0.5);
+   
 }
 
 nav {
@@ -109,7 +112,7 @@ nav button {
 .separation {
    height: 6px;
    background-color: rgba(234, 202, 202, 0.5);
-   width: 130%;
+   width: 100%;
    margin-top: 6rem;
    margin-bottom: rem;
    
@@ -183,7 +186,7 @@ section.first1> div :nth-child(2){
 .secImg2{
     width: 40vw;
     position: relative;
-    margin-right: -20rem;
+    margin-right: -10rem;
     z-index: 30;
     background-size: contain;
     background: url(images/image2.png) no repeat center;
@@ -205,7 +208,7 @@ section.first1> div :nth-child(2){
     justify-content: center;
     max-width: 70vw;
     margin-top: 1rem;
-    margin-left: 10rem;
+    margin-left: 5rem;
     margin-bottom: -5rem;
     color: #ffffff;
     align-items: center;
@@ -416,11 +419,22 @@ footer span{
     font-weight: bold;
 }
 
+
 /* Mobile layout */
-@media (max-width: 768px) {
+@media (max-width: 789px) {
+    .main {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 95vh;
+        width: 100%;
+        background-color: black;
+        position: relative;
+    }
+
     nav {
-        padding: 0 1rem;
-        max-width: 100%;
+        padding: 0.5rem 1rem;
+        flex-wrap: wrap;
     }
 
     nav img {
@@ -429,47 +443,243 @@ footer span{
         padding-top: 2vh;
     }
 
-    .nav-actions {
-        display: flex;
-        align-items: center;
-    }
-
-    .hero {
-        padding: 80px 1rem 40px;
-        margin-top: 0;
-    }
-
     .hero>:nth-child(1),
     .hero>:nth-child(2) {
-        font-size: clamp(1.8rem, 6vw, 2.4rem);
+        font-size: 1.75rem;
         line-height: 1.2;
     }
 
     .hero>:nth-child(3) {
         font-size: 1rem;
-        padding: 0.5rem 0.75rem;
     }
 
     .hero>:nth-child(4) {
-        font-size: 0.95rem;
-        padding: 0 0.75rem 0.5rem;
-        margin-bottom: 0;
+        font-size: 0.9rem;
     }
 
     .hero-actions {
         flex-direction: column;
-        align-items: stretch;
-        gap: 0.75rem;
+        width: 100%;
+        padding: 0 1rem;
     }
 
-    .hero-actions input,
+    .hero-actions input {
+        width: 100%;
+        min-width: 0;
+        
+        padding-right: 1rem;
+    }
+
     .hero-actions .btn1 {
         width: 100%;
+        max-width: 200px;
+    }
+
+    .first,
+    .first1,
+    .first2 {
+        flex-direction: column;
         max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 3rem;
+        padding: 0 1.5rem;
+        text-align: center;
+    }
+
+    .first1 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .first2 {
+        margin-left: 0;
+        margin-bottom: 2rem;
+    }
+
+    section.first > div,
+    section.first1 > div,
+    section.first2 > div {
+        align-items: center;
+    }
+
+    section.first > div :nth-child(1),
+    section.first1 > div :nth-child(1),
+    section.first2 > div :nth-child(1) {
+        font-size: 1.5rem;
+    }
+
+    section.first > div :nth-child(2),
+    section.first1 > div :nth-child(2),
+    section.first2 > div :nth-child(2) {
+        font-size: 1rem;
+    }
+
+    .secImg,
+    .secImg1,
+    .secImg2 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        order: -1;
+    }
+
+    .secImg .img,
+    .secImg1 .img,
+    .secImg2 .img {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .secImg2 video {
+        width: 60%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        top: 20%;
+    }
+
+    .first1 .secImg1 {
+        order: -1;
     }
 
     .separation {
-        width: 100%;
-        margin-top: 15vh;
+        margin-top: 3rem;
+    }
+
+    .feq h2 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 1.25rem;
+        padding: 0 1rem;
+    }
+
+    .feqbox {
+        max-width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        padding: 1rem;
+    }
+
+    .feqbox span {
+        font-size: 1rem;
+    }
+
+    .last {
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .last span {
+        margin-left: 0;
+        display: block;
+    }
+
+    .last .hero-actions {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer span {
+        margin-left: 0;
+        text-align: center;
+        display: block;
+        padding: 0 1rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        margin-left: 0;
+        padding: 0 1rem;
+        gap: 1rem;
+    }
+
+    .footer-item {
+        margin-left: 0;
+    }
+
+    .ft1,
+    .ft4,
+    .ft5 {
+        margin-left: 0;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    .ft5 {
+        margin-bottom: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav img {
+        width: 90px;
+    }
+
+    .hero>:nth-child(1),
+    .hero>:nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet: reduce fixed margins so layout doesn't overflow */
+@media (min-width: 790px) and (max-width: 1100px) {
+    .first {
+        margin-left: 2rem;
+        max-width: 90vw;
+    }
+
+    .first1 {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        max-width: 90vw;
+    }
+
+    .first2 {
+        margin-left: 2rem;
+        max-width: 90vw;
+    }
+
+    .secImg .img {
+        width: 45vw;
+    }
+
+    .secImg1 {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .secImg2 video {
+        width: 25vw;
+        margin-left: 5rem;
+    }
+
+    .feq h2,
+    .feqbox {
+        margin-left: 2rem;
+    }
+
+    .feqbox {
+        max-width: 90vw;
+    }
+
+    .last span {
+        margin-left: 2rem;
+    }
+
+    .footer,
+    .footer-item {
+        margin-left: 2rem;
+    }
+
+    .ft1,
+    .ft4,
+    .ft5 {
+        margin-left: 2rem;
     }
 }

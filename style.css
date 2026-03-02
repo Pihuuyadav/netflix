@@ -18,7 +18,7 @@ body {
     height: 95vh;
     background-color: black;
     position: relative;
-}
+} 
 
 
 .main .box {
@@ -109,17 +109,7 @@ nav button {
 
 
 
-.separation {
-   height: 6px;
-   background-color: rgba(234, 202, 202, 0.5);
-   width: 100%;
-   margin-top: 6rem;
-   margin-bottom: rem;
-   
-   
-   
- 
-}
+
 .first{
     display: flex;
     justify-content: center;
